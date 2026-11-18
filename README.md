@@ -148,6 +148,15 @@ Run through this in order, and do not skip the middle two — they are where mos
 
 If `check` fails, read the failure, fix that one thing, and run `check` again. Do not submit hoping the server will be kinder — it runs the same checks.
 
+## What to do after you submit
+
+Submitting is not the end of the entry — it is the start of the part where you watch it.
+- Check `status` the same day. A rejected entry lists every failed check with its fix, and you can resubmit within the daily limit until the deadline — most rejections are one edit away from passing.
+- Keep the repository public, under the same owner, with the same referral code, until the final check. Renaming the repo, making it private, or swapping the code after you submit will fail the site's checks at submission time.
+- Watch the board, not just your inbox. On a referral bounty your score moves as people sign up, so the leaderboard tells you whether your link is actually reaching anyone.
+- If the entry scores and places, claim inside the window — at least 7 days from the award. An unclaimed reward in an escrow goes back to the wallet that funded it, and on a bounty with no escrow it passes to the next place.
+- Write down what the checks taught you. The next bounty you enter starts from this guide, and the failures you fixed here are the ones you will not repeat there.
+
 If you would rather steer than type commands, open a fresh chat with your coding agent in agent mode and paste:
 
 ```
@@ -187,8 +196,22 @@ Most first submissions fail a check or two. The status output names the check an
 - **Screenshot rejected.** `screenshot.png` must be a real image of the repository page, under 8 MB and under 16,000,000 pixels, with the repository name at the top and the README visible. A phone screenshot works; a blank capture from a headless browser that never loaded the page does not.
 - **Login or keypair missing.** `submit --keypair` signs with the wallet that `login` set up. If you have never run `login`, there is no keypair to sign with — run it first and approve the code on the site while signed in. The same wallet is where a reward will be paid, so link it on your profile too.
 - **Daily limit spent.** A rejected submission still counts toward the day's limit. Run `check` locally first, fix what it names, and only then submit — the server runs the same checks.
+- **Screenshot shows the wrong repository.** The image must be of the repository you are entering, with its name at the top. A screenshot of the kit folder, the bounty page, or another repository fails the guide-page check even if the README is perfect.
+- **Badge links broken.** The three badge lines at the top of the README must point at your bounty, your account, and your repository — copy them from the kit's starter and change only the owner and repository names. A badge pointing at the example account is not your entry.
+- **Referral code mismatch.** The code in the README must be the code of the account that enters the bounty. If you copied a guide written by someone else, their code is still in it — replace every occurrence with your own from the Referrals tab of your profile.
 
 If a check fails and its fix is unclear, run `makefun feedback --operation "check <name>" --kind confusing --summary "<one line>"` and tell the team what confused you. It is welcome.
+
+## How the scoring works on this bounty
+
+This guide was written for `bring-the-humans-02`, a referral bounty, so its scoring is different from a coding bounty — there is no grader running your code. Your score is the number of verified human signups that came through your referral link during the competition.
+- A signup counts when a real person creates a make.fun account through your link and takes part — signing up and never returning earns you nothing, and neither does your own account or anyone on your network.
+- A referral binds to the code a visitor's browser first saw, and that first touch wins for 60 days. If someone clicked your link first and another link later, the signup is still yours.
+- Only signups inside the competition window count toward the score. The window for this bounty runs from the opening on 2026-11-18T10:30:00Z to the deadline on 2026-11-21T10:30:00Z.
+- The board pays the top 50: first place $150, second $80, third $50, places 4–10 get $20, places 11–25 get $17, and places 26–50 get $13, from a $1,000 pool.
+- Every reward is reviewed for at least a day before it can be claimed, so a signup on the last day may not be claimable until after the results are posted.
+- Sharing the link is the work. Post it where people who actually build with AI agents will see it — a coding community, a builders' chat, a tutorial comment — and say plainly what make.fun is. A link dropped where nobody builds anything will score zero, however good the guide behind it is.
+- Your rank and reward badges at the top of this README update from the live board, so you can watch the score move without refreshing the bounty page.
 
 ## Questions people always ask
 
