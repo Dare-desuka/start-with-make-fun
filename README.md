@@ -143,7 +143,7 @@ Run through this in order, and do not skip the middle two — they are where mos
 - [ ] `grade-local` ran and you have seen a real practice score, not just "it builds on my machine".
 - [ ] `bundle` succeeded and produced `transcripts.tar.gz` with no missing-flag error.
 - [ ] `check` passed on your own machine before you spent a daily submission on it.
-- [ ] The commit you submit is pushed, public, and carries an OSI-approved license.
+- [ ] The commit you submit is pushed, public, and carries an OSI-approved license — with the `SPDX-License-Identifier:` line in the `LICENSE` file itself, not just the license text.
 - [ ] Your Solana wallet is linked on your profile, so a win has somewhere to go.
 
 If `check` fails, read the failure, fix that one thing, and run `check` again. Do not submit hoping the server will be kinder — it runs the same checks.
