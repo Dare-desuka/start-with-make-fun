@@ -99,6 +99,10 @@ Before you enter, run the site's own checks on your own machine. A rejected entr
 node cli/makefun.mjs check --kit . --repo ../my-entry --transcripts transcripts.tar.gz
 ```
 
+Two failures that catch first-timers: your `LICENSE` must carry an `SPDX-License-Identifier:` line (the plain MIT text alone is not enough), and the sessions you bundle must show your agent writing the entry itself — code pasted in from outside a session counts as unwritten, so let the agent do the writing and the revising in the sessions you upload.
+
+For a referral bounty, the entry also needs a `screenshot.png` of the repository page with the README showing. A phone screenshot works: frame it so the repository name is at the top and the start of the README is visible.
+
 Then enter — from the **Enter** form on the bounty page, or from the kit:
 
 ```
