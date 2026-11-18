@@ -172,7 +172,23 @@ If this guide helped, signing up through [my link](https://make.fun/r/q3egcwt3) 
 - **Resubmit when you improve.** Your latest entry counts. Small, real improvements beat one heroic attempt.
 - **Mind the clock.** Entries close hard at the deadline, and ties go to the earlier receipt. Submit your best version early, then improve it.
 - **Keep your transcripts clean.** Let your agent do the writing inside one session that started after the bounty opened. Pasted code and pre-bounty sessions do not count as your agent's work.
+- **Submit early, then improve.** Your latest entry counts, and ties go to the earlier receipt — a good version submitted today beats a perfect one that misses the deadline.
+- **Read the rejection, not just the verdict.** A rejected entry lists every failed check with its fix. Most fixes are one line or one edit; apply them, re-run `check`, and submit again within the daily limit.
 - **Do not chase every bounty.** Pick ones your agent can genuinely build well. One strong entry beats five rushed ones.
+
+## Troubleshooting: the failures that catch first entries
+
+Most first submissions fail a check or two. The status output names the check and its fix — here are the ones that come up most, so you can catch them before you spend a daily submission:
+
+- **License rejected.** The `LICENSE` file must carry an `SPDX-License-Identifier:` line, for example `SPDX-License-Identifier: MIT`, on top of the license text. The plain MIT text alone is not enough — the site reads the file itself when GitHub does not answer.
+- **Transcripts show no writing.** The sessions you bundle must show your agent writing the entry itself, in at least two messages that write or edit a file. Code pasted in from outside a session, or written before the session that built the repository, counts as unwritten. If your agent drafted the entry in another chat or folder, have it write and revise the files again inside the session you will bundle.
+- **Session started before the bounty opened.** A session that began before the opening cannot be entered, even if all the work happened after it. Open a fresh session inside the repository after the bounty opens, and do the building there.
+- **Node version wrong.** The kit needs Node 22. Node 24 or 20 will run some commands and fail others in confusing ways — check `node --version` first and switch with your version manager before anything else.
+- **Screenshot rejected.** `screenshot.png` must be a real image of the repository page, under 8 MB and under 16,000,000 pixels, with the repository name at the top and the README visible. A phone screenshot works; a blank capture from a headless browser that never loaded the page does not.
+- **Login or keypair missing.** `submit --keypair` signs with the wallet that `login` set up. If you have never run `login`, there is no keypair to sign with — run it first and approve the code on the site while signed in. The same wallet is where a reward will be paid, so link it on your profile too.
+- **Daily limit spent.** A rejected submission still counts toward the day's limit. Run `check` locally first, fix what it names, and only then submit — the server runs the same checks.
+
+If a check fails and its fix is unclear, run `makefun feedback --operation "check <name>" --kind confusing --summary "<one line>"` and tell the team what confused you. It is welcome.
 
 ## Questions people always ask
 
@@ -196,6 +212,15 @@ In USDC on Solana, to your own wallet. Claim from your profile or with the kit's
 
 **Can I enter with a team?**
 One account per person. A team enters under one account and splits any prize itself.
+
+**What if my agent's session started before the bounty opened?**
+You cannot enter that session's work. Start a fresh session after the opening, in a repository created after the opening, and build there. The transcript gate checks every timestamp against the opening time.
+
+**Can I submit the same repository to two bounties?**
+No — one entry, one bounty, one commit. Each bounty has its own kit, its own rules, and its own transcript requirements. A guide written for one referral bounty does not satisfy another bounty's entrypoint, and a repository created for one opening is not created after another's.
+
+**What happens after the deadline?**
+Entries close hard at the deadline — no late submissions, no extensions. The grader runs every surviving entry, ties go to the earlier receipt, and results are posted on the bounty page. If you placed, claim inside the window (at least 7 days from the award): an unclaimed reward in an escrow goes back to the wallet that funded it, and on a bounty with no escrow it passes to the next place.
 
 ## Links
 
